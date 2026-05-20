@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortofolio Riestha</title>
+
+    <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f5f7ff;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR*/
+
+    .navbar{
+      background:rgba(0,0,0,0.15);
+      backdrop-filter:blur(12px);
+      padding:15px 0;
+      transition:0.4s;
+    }
+
+    .navbar-brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:white !important;
+      font-size:28px;
+      font-weight:700;
+    }
+
+    .navbar-brand img{
+      width:45px;
+      height:45px;
+      object-fit:cover;
+      border-radius:50%;
+    }
+
+    .nav-link{
+      color:white !important;
+      margin:0 10px;
+      position:relative;
+      font-weight:500;
+    }
+
+    .nav-link::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:-5px;
+      width:0%;
+      height:2px;
+      background:white;
+      transition:0.4s;
+    }
+
+    .nav-link:hover::after{
+      width:100%;
+    }
+
+    .contact-btn{
+      background:#001f7a;
+      color: white !important;
+      border-radius:10px;
+      padding:8px 20px !important;
+    }
+
+    /* HERO*/
+
+    .hero{
+      min-height:100vh;
+      background:linear-gradient(135deg,#000428,#004e92,#007bff);
+      display:flex;
+      align-items:center;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      width:400px;
+      height:400px;
+      background:rgba(255,255,255,0.08);
+      border-radius:50%;
+      top:-100px;
+      right:-100px;
+      animation:float 6s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(20px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    .hero-text h1{
+      font-size:65px;
+      font-weight:700;
+    }
+
+    .hero-text span{
+      color:#9ed6ff;
+    }
+
+    .hero-text p{
+      margin-top:15px;
+      color:#d9e9ff;
+    }
+
+    /* SOCIAL MEDIA IMAGE*/
+
+    .social-media{
+      display:flex;
+      gap:15px;
+      margin-top:25px;
+      margin-bottom:30px;
+    }
+
+    .social-media a img{
+      width:50px;
+      height:50px;
+      object-fit:cover;
+      border-radius:50%;
+      transition:0.4s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .social-media a img:hover{
+      transform:translateY(-8px) scale(1.1);
+    }
+
+    /* BUTTON */
+
+    .btn-custom{
+      background:#091d58;
+      color:white;
+      border:none;
+      padding:12px 28px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.4s;
+    }
+
+    .btn-custom:hover{
+      transform:translateY(-5px);
+      background:#dcecff;
+    }
+
+    .btn-outline-custom{
+      border:2px solid white;
+      color: rgb(131, 185, 247);
+      padding:12px 28px;
+      border-radius:12px;
+      transition:0.4s;
+    }
+
+    .btn-outline-custom:hover{
+      background:white;
+      color:#00338d;
+    }
+
+    /*  HERO IMAGE*/
+
+    .hero-image{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .hero-image img{
+      width:320px;
+      border-radius:25px;
+      position:relative;
+      z-index:2;
+      animation:updown 4s ease-in-out infinite;
+      box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    @keyframes updown{
+      0%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-20px);
+      }
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    /* ANIMATION CIRCLE */
+
+    .circle1{
+      position:absolute;
+      width:120px;
+      height:120px;
+      border:5px solid #80cfff;
+      border-radius:50%;
+      top:20px;
+      left:40px;
+      animation:rotate 10s linear infinite;
+    }
+
+    .circle2{
+      position:absolute;
+      width:80px;
+      height:80px;
+      background:#6a5cff;
+      border-radius:20px;
+      bottom:30px;
+      right:50px;
+      opacity:0.5;
+      animation:rotate 8s linear infinite;
+    }
+
+    @keyframes rotate{
+      from{
+        transform:rotate(0deg);
+      }
+      to{
+        transform:rotate(360deg);
+      }
+    }
+
+    body{
+      background: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+
+    /* ABOUT */
+    .about-box{
+      background: #eaf1ff;
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .profile-img{
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .profile-img:hover{
+      transform: scale(1.03);
+    }
+
+    .circle{
+      width: 120px;
+      height: 120px;
+      background: rgba(37, 53, 155, 0.4);
+      border-radius: 50%;
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{
+        transform: translateY(0);
+      }
+      50%{
+        transform: translateY(-10px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+    }
+
+    .title-small{
+      color: #26348b;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .line{
+      width: 60px;
+      height: 4px;
+      background: #26348b;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .counter-box{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+      transition: 0.4s;
+    }
+
+    .counter-box:hover{
+      transform: translateY(-5px);
+    }
+
+    .icon-box{
+      width: 70px;
+      height: 70px;
+      background: #dcdcdc;
+      border-radius: 10px;
+    }
+
+    .counter-box h2{
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .icon-box{
+    width: 80px;
+    height: 80px;
+    background: #f5f5f5;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.btn-outline-custom:hover{
+      background:white;
+      color:#00338d;
+    }
+
+    /* SKILLS */
+    .skills-section{
+      margin-top: 100px;
+      margin-bottom: 80px;
+    }
+
+    /* SKILL CARD */
+    .skill-card{
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Glow Animation */
+    .skill-card::before{
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(45, 85, 255, 0.08);
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+      transition: 0.5s;
+    }
+
+    .skill-card:hover::before{
+      transform: scale(1.5);
+    }
+
+    /* Hover Effect */
+    .skill-card:hover{
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .skill-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .skill-name{
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    /* Logo Animation */
+    .skill-name img{
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+      margin-right: 10px;
+      transition: 0.5s;
+    }
+
+    .skill-card:hover img{
+      transform: rotate(10deg) scale(1.15);
+    }
+
+    /* Progress */
+    .progress{
+      height: 14px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #e7e7e7;
+    }
+
+    .progress-bar{
+      width: 0;
+      border-radius: 20px;
+      background: linear-gradient(
+        90deg,
+        #1f2c8c,
+        #4d79ff,
+        #1f2c8c
+      );
+      background-size: 300% 100%;
+      animation: gradientMove 2s linear infinite;
+      transition: width 3s ease;
+    }
+
+    @keyframes gradientMove{
+      0%{
+        background-position: 0% 50%;
+      }
+      100%{
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Percent Animation */
+    .percent{
+      font-weight: bold;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse{
+      0%{
+        transform: scale(1);
+      }
+      50%{
+        transform: scale(1.1);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+
+    /* Fade Animation */
+    .fade-up{
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* PROJECT SECTION */
+.project-section{
+  background: linear-gradient(
+    135deg,
+    #000428,
+    #001f7a,
+    #0033a0
+  );
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-radius: 30px;
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-small{
+  color: #5b5bff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.project-title{
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.view-project{
+  color: #6b6bff;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.view-project:hover{
+  color: white;
+  transform: translateX(8px);
+}
+
+.project-card{
+  background: #edf2ff;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.5s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.project-card:hover{
+  transform: translateY(-12px);
+}
+
+.project-img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.project-content{
+  padding: 20px;
+}
+
+.project-content h3{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-content p{
+  color: #444;
+  min-height: 70px;
+}
+
+.project-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 2px solid #001f7a;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #001f7a;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.project-btn:hover{
+  background: #001f7a;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .project-title{
+    font-size: 40px;
+  }
+
+  .view-project{
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+}
+
+/* CONTACT */
+.contact-section{
+    padding: 100px 0;
+    background: #f4f4f4;
+}
+
+.contact-wrapper{
+    background: #fff;
+    border: 2px solid #3d3d85;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.contact-subtitle{
+    color: #1c1f73;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-title{
+    font-size: 70px;
+    font-weight: 800;
+    color: #06062e;
+    line-height: 1;
+}
+
+.contact-desc{
+    font-size: 22px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+/* FOTO */
+.photo-card{
+    width: 180px;
+    height: 260px;
+
+    background: #0e1d92;
+    border: 4px solid #23b7ff;
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    padding: 10px;
+}
+
+.photo-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* CONTACT ITEM */
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.contact-item i{
+    font-size: 35px;
+}
+
+.contact-item a{
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.contact-item a:hover{
+    color: #0e1d92;
+}
+
+/* FORM */
+.message-box{
+    border: 3px solid #23b7ff;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+}
+
+.message-header{
+    border-bottom: 2px solid #23b7ff;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-header h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+
+    width: 80%;
+}
+
+.message-header i{
+    font-size: 45px;
+    color: #1c1f73;
+}
+
+.message-body{
+    padding: 20px;
+}
+
+.custom-input{
+    border: none !important;
+    background: #efefef !important;
+
+    padding: 15px !important;
+    border-radius: 8px !important;
+
+    margin-bottom: 18px;
+
+    box-shadow: none !important;
+}
+
+textarea{
+    resize: none;
+}
+
+.send-btn{
+    width: 100%;
+    border: none;
+
+    background: #1a2385;
+    color: white;
+
+    padding: 15px;
+    border-radius: 8px;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.send-btn:hover{
+    background: #09115d;
+}
+
+/* RESPONSIVE */
+@media(max-width: 991px){
+
+    .contact-title{
+        font-size: 50px;
+    }
+
+    .photo-card{
+        margin-bottom: 30px;
+    }
+
+}
+
+@media(max-width: 576px){
+
+    .contact-wrapper{
+        padding: 20px;
+    }
+
+    .contact-title{
+        font-size: 40px;
+    }
+
+    .message-header h3{
+        font-size: 24px;
+    }
+
+}
+
+  /* FOOTER */
+.footer-section{
+    background: #020d57;
+    color: white;
+
+    padding-top: 50px;
+    margin-top: 100px;
+}
+
+.footer-logo{
+    color: #29b6ff;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer-desc{
+    font-size: 18px;
+    line-height: 1.7;
+    width: 90%;
+}
+
+.footer-title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* SOCIAL */
+.social-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.social-item i{
+    font-size: 28px;
+}
+
+.social-item a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.social-item a:hover{
+    color: #29b6ff;
+}
+
+/* QUICK LINK */
+.footer-links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover{
+    color: #29b6ff;
+}
+
+/* COPYRIGHT */
+.footer-bottom{
+    text-align: center;
+
+    margin-top: 40px;
+    padding: 15px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 991px){
+
+    .footer-section{
+        text-align: center;
+    }
+
+    .footer-desc{
+        width: 100%;
+    }
+
+    .social-item{
+        justify-content: center;
+    }
+
+}
+
+  </style>
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+      <a class="navbar-brand" href="#">
+
+        <img src="asset/logo me.png" alt="logo">
+
+        Riestha.
+
+      </a>
+
+      <button class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav ms-auto align-items-center">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link contact-btn" href="#follow">Follow Me</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <!-- TEXT -->
+        <div class="col-lg-6 hero-text" data-aos="fade-right">
+            
+          <h5><b>Hello, I'm</b></h5>
+
+          <h1>Riestha</h1>
+
+          <h3>
+            Aspiring
+            <span>Developer & Designer</span>
+          </h3>
+
+          <p>
+            This is my portfolio website, 
+            welcome to where I showcase all my work related to design and others.
+          </p>
+
+          <div class="social-media">
+
+            <a href="https://instagram.com/dkkyeom.ie"
+              target="_blank">
+              <img src="asset/ig.png" alt="instagram">
+            </a>
+
+            <a href="https://wa.me/+62 859-4657-1560"
+              target="_blank">
+              <img src="asset/wa.png" alt="whatsapp">
+            </a>
+
+            <a href="https://tiktok.com/rfaao0ooww"
+              target="_blank">
+              <img src="asset/tt.png" alt="tiktok">
+            </a>
+
+            <a href="https://github.com/https://github.com/arrrffaarstaaa"
+              target="_blank">
+              <img src="asset/github.png" alt="github">
+             </a>
+
+            <a href="https://spotify.com/"
+              target="_blank">
+              <img src="asset/sptfy.png" alt="github">
+
+            </a>
+
+          </div>
+
+    <div class="d-flex gap-3 flex-wrap">
+
+      <a href="#about" class="btn btn-custom">
+      Read More
+      </a>
+
+      <a href="#project" class="btn btn-outline-custom">
+      View My Project
+      </a>
+
+      </div>
+
+      </div>
+
+        
+        <div class="col-lg-6">
+
+          <div class="hero-image" data-aos="zoom-in">
+
+            
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+
+            <img src="asset/meeee.png" alt="foto">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+    <div class="top-bg"></div>
+
+  <div class="container" id="about">
+
+    <div class="about-box" data-aos="zoom-in">
+    <div class="row align-items-center">
+
+        <div class="col-lg-4 mb-4 mb-lg-0 position-relative">
+          <img src="asset/riss.jpg" class="profile-img" alt="Profile">
+          <div class="circle"></div>
+
+        </div>
+
+        
+      <div class="col-lg-8 fade-up">
+
+          <h5 class="title-small">ABOUT ME</h5>
+
+          <h1 class="fw-bold">Get To Know Me</h1>
+
+          <div class="line"></div>
+
+          <p style="font-size: 20px;">
+            I'm a 10th-grade student at SMK N Tengaran, majoring in RPL (Research and Development). I enjoy trying new things I've never tried before, hoping to gain experience for my future. My hobbies include light exercise, such as jogging and the like. I enjoy listening to K-pop, English, and Indonesian pop music. I'm also committed to giving my best effort at every opportunity.
+          </p>
+
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="counter-box">
+
+                <div class="icon-box" href="">
+                    <img src="asset/fg.png" alt="">
+                </div>
+
+                <div>
+                  <h2>2+</h2>
+                  <p>Figma Project</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="counter-box">
+
+                <div class="icon-box">
+                    <img src="asset/canva.png" alt="">
+                </div>
+
+                <div>
+                  <h2>60+</h2>
+                  <p>Design Canva</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="counter-box">
+
+                <div class="icon-box">
+                    <img src="asset/github.png" alt="">
+                </div>
+
+                <div>
+                  <h2>7+</h2>
+                  <p>Github</p>
+                </div>
+
+              </div>
+            </div>
+            
+            <br>
+
+          <p>
+            <div class="d-flex gap-3 flex-wrap">
+
+      <a href="recount.html" class="btn btn-custom" style="margin-top: 20PX;">
+      MY EXPERIENCE
+      </a>
+      </div>
+          </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    
+    <section class="skills-section" id="skills">
+
+      <div class="row mb-5">
+
+        <div class="col-lg-4">
+
+          <h5 class="title-small">MY SKILLS</h5>
+
+          <h1 class="fw-bold display-4">Tools I Use</h1>
+
+          <div class="line"></div>
+
+        </div>
+
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card" data-aos="fade-up">
+
+            <div class="skill-top">
+
+              <div class="skill-name">
+                <img src="asset/fg.png">
+                Figma
+              </div>
+
+              <span class="percent" data-target="80">0%</span>
+
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" data-width="80"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CANVA -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="skill-top">
+
+              <div class="skill-name">
+                <img src="asset/canva.png">
+                Canva
+              </div>
+
+              <span class="percent" data-target="90">0%</span>
+
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" data-width="90"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="skill-top">
+
+              <div class="skill-name">
+                <img src="asset/capcut.png">
+                CapCut
+              </div>
+
+              <span class="percent" data-target="90">0%</span>
+
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" data-width="90"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card" data-aos="fade-up">
+
+            <div class="skill-top">
+
+              <div class="skill-name">
+                <img src="asset/vsc.png">
+                VS Code
+              </div>
+
+              <span class="percent" data-target="80">0%</span>
+
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" data-width="80"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="skill-top">
+
+              <div class="skill-name">
+                <img src="asset/boostrap.png">
+                Bootstrap
+              </div>
+
+              <span class="percent" data-target="85">0%</span>
+
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" data-width="85"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="skill-top">
+
+              <div class="skill-name">
+                <img src="asset/js.png">
+                JavaScript
+              </div>
+
+              <span class="percent" data-target="35">0%</span>
+
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar" data-width="35"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  
+<section class="project-section py-5" id="project">
+
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap mb-5">
+
+      <div>
+        <h5 class="project-small">MY PROJECT</h5>
+        <h1 class="project-title">Featured Project</h1>
+      </div>
+
+      <a href="#project2" class="view-project">
+        View All Project
+        <i class="bi bi-arrow-right"></i>
+      </a>
+
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+
+          <img src="asset/p1.png" class="project-img">
+
+          <div class="project-content">
+
+            <h3>Recycle Web</h3>
+
+            <p>
+              The first collaborative website in semester 1,
+              about recycling waste into products.
+            </p>
+
+            <a href="https://arrrffaarstaaa.github.io/Landing-Page-Kolaborasi1/" 
+            target="_blank"
+            class="project-btn">
+              View Project
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+
+          <img src="asset/p2.png" class="project-img">
+
+          <div class="project-content">
+
+            <h3>Digital School Web</h3>
+
+            <p>
+              The first website in semester 2,
+              about integrated digital vocational school.
+            </p>
+
+            <a href="https://arrrffaarstaaa.github.io/Landing-Page-Sekolah/" 
+            target="_blank"
+            class="project-btn">
+              View Project
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+
+          <img src="asset/p3.png" class="project-img">
+
+          <div class="project-content">
+
+            <h3>Environment Web</h3>
+
+            <p>
+              The second website in semester 2,
+              about education regarding change and donations.
+            </p>
+
+            <a href="https://arrrffaarstaaa.github.io/Landing-Page-Environment/" 
+            target="_blank"
+            class="project-btn">
+              View Project
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" id="#project2">
+        <div class="project-card">
+
+          <img src="asset/p4.png" class="project-img">
+
+          <div class="project-content">
+
+            <h3>Landing Page 3</h3>
+
+            <p>
+              The third website in semester 2,
+              creating a website with Pinterest references.
+            </p>
+
+            <a href="https://arrrffaarstaaa.github.io/tugas4/" 
+            target="_blank"
+            class="project-btn">
+              View Project
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+
+          <img src="asset/p5.png" class="project-img">
+
+          <div class="project-content">
+
+            <h3>Pat-Care Web</h3>
+
+            <p>
+              The 4th website in semester 2,
+              about pet care and product selling.
+            </p>
+
+            <a href="https://arrrffaarstaaa.github.io/tugas-5-petcare-kelompok-6/" 
+            target="_blank"
+            class="project-btn">
+              View Project
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <section class="contact-section" id="contact">
+
+  <div class="container">
+
+    <div class="contact-wrapper">
+
+      <div class="row g-5 align-items-center">
+
+        <div class="col-lg-7">
+
+          <h5 class="contact-subtitle">
+            LET’S WORK TOGETHER
+          </h5>
+
+          <h1 class="contact-title">
+            Contact Me
+          </h1>
+
+          <p class="contact-desc">
+            Feel free to send me a message.
+            I'll get back to you as soon as possible.
+          </p>
+
+          <div class="row align-items-center">
+
+            <div class="col-md-4">
+
+              <div class="photo-card">
+
+                <img src="asset/meeee.png" alt="foto">
+
+              </div>
+
+            </div>
+
+            <div class="col-md-8">
+
+              <div class="contact-item">
+
+                <i class="bi bi-whatsapp text-success"></i>
+
+                <a href="https://wa.me/6285946571560" target="_blank">
+                  +62 859-4657-1560
+                </a>
+
+              </div>
+
+              <div class="contact-item">
+
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+
+                <a href="https://maps.google.com/?q=Tengaran+Semarang" target="_blank">
+                  HGMC+4P2 Tengaran, Kab. Semarang, Jawa Tengah.
+                </a>
+
+              </div>
+
+              <div class="contact-item">
+
+                <i class="bi bi-envelope-fill text-primary"></i>
+
+                <a href="mailto:jeonghanyeon1@gmail.com">
+                  jeonghanyeon1@gmail.com
+                </a>
+
+              </div>
+
+              <div class="contact-item">
+
+                <i class="bi bi-github"></i>
+
+                <a href="https://github.com/arrrffaarstaaa" target="_blank">
+                  https://github.com/arrrffaarstaaa
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-5">
+
+          <form
+          action="https://formsubmit.co/jeonghanyeon1@gmail.com"
+          method="POST"
+          class="message-box">
+
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+
+            <div class="message-header">
+
+              <h3>
+                Send Your Message For Me.
+              </h3>
+
+              <i class="bi bi-envelope-paper"></i>
+
+            </div>
+
+            <div class="message-body">
+
+              <div class="row">
+
+                <div class="col-md-6">
+
+                  <input type="text"
+                  name="name"
+                  class="form-control custom-input"
+                  placeholder="Your Name"
+                  required>
+
+                </div>
+
+                <div class="col-md-6">
+
+                  <input type="email"
+                  name="email"
+                  class="form-control custom-input"
+                  placeholder="Your Email"
+                  required>
+
+                </div>
+
+              </div>
+
+              <input type="text"
+              name="subject"
+              class="form-control custom-input"
+              placeholder="Subject"
+              required>
+
+              <textarea
+              rows="5"
+              name="message"
+              class="form-control custom-input"
+              placeholder="Your Message"
+              required></textarea>
+
+              <button type="submit" class="send-btn">
+                Send Message →
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer-section" id="follow">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4">
+
+        <h2 class="footer-logo">Riestha</h2>
+
+        <p class="footer-desc">
+          “Website ini dibuat untuk memperkenalkan data diri kemampuan,
+          serta karya yang telah dibuat selama proses pembelajaran di sekolah.”
+        </p>
+
+      </div>
+
+      <div class="col-lg-4">
+
+        <h3 class="footer-title">
+          Support Media Sosial
+        </h3>
+
+        <div class="social-item">
+
+          <i class="bi bi-instagram"></i>
+
+          <a href="https://instagram.com/dkkyeom.ie" target="_blank">
+            @dkkyeom.ie
+          </a>
+
+        </div>
+
+        <div class="social-item">
+
+          <i class="bi bi-tiktok"></i>
+
+          <a href="https://tiktok.com/rfaao0ooww" target="_blank">
+            @rfaao0ooww
+          </a>
+
+        </div>
+
+        <div class="social-item">
+
+          <i class="bi bi-twitter-x"></i>
+
+          <a href="https://twitter.com/shuaaashinnec_" target="_blank">
+            @shuaaashinnec_
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-4">
+
+        <h3 class="footer-title">
+          Quick Links
+        </h3>
+
+        <div class="footer-links">
+
+          <a href="#home">Home</a>
+          <a href="#project">Project</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#skills">Skills</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    © 2026 [collaboration website]. All rights reserved.
+
+  </div>
+
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      duration:1000,
+      once:true
+    });
+
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  // PROGRESS BAR ANIMATION SCROLL RESET
+  const skillCards = document.querySelectorAll(".skill-card");
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      const bar = entry.target.querySelector(".progress-bar");
+      const percent = entry.target.querySelector(".percent");
+
+      const target = parseInt(bar.getAttribute("data-width"));
+
+      // SAAT MASUK LAYAR
+      if(entry.isIntersecting){
+
+        let progress = 0;
+
+        bar.style.width = "0%";
+        percent.innerText = "0%";
+
+        const animate = setInterval(() => {
+
+          if(progress >= target){
+
+            clearInterval(animate);
+
+          } else {
+
+            progress++;
+
+            bar.style.width = progress + "%";
+            percent.innerText = progress + "%";
+
+          }
+
+        }, 20);
+
+      }
+
+      // SAAT KELUAR LAYAR
+      else{
+
+        bar.style.width = "0%";
+        percent.innerText = "0%";
+
+      }
+
+    });
+
+  }, {
+    threshold: 0.4
+  });
+
+  skillCards.forEach(card => {
+    observer.observe(card);
+  });
+
+</script>
+
+</body>
+</html>
